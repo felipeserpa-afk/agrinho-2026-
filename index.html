@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroMax - Loja Agrícola</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white font-nunito">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center text-white font-bold text-xl">A</div>
+      <span class="text-2xl font-extrabold text-green-800">AgroMax</span>
+    </div>
+    <nav class="hidden md:flex gap-8 font-semibold">
+      <a href="#inicio" class="hover:text-green-700 transition">Início</a>
+      <a href="#produtos" class="hover:text-green-700 transition">Produtos</a>
+      <a href="#carrinho" class="hover:text-green-700 transition">Carrinho</a>
+      <a href="#contato" class="hover:text-green-700 transition">Contato</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+    <div class="flex flex-col p-4 gap-4">
+      <a href="#inicio">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#carrinho">Carrinho</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="hero-section min-h-screen flex items-center justify-center text-center text-white relative">
+  <div class="bg-black/50 absolute inset-0"></div>
+  <div class="relative z-10 max-w-4xl px-6">
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Tudo para sua produção agrícola</h1>
+    <p class="text-lg md:text-2xl mb-8">Máquinas, sementes e insumos de qualidade para aumentar sua produtividade.</p>
+    <a href="#produtos" class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 py-4 rounded-full text-lg transition duration-300">Ver Produtos</a>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos" class="py-20">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-green-800">Catálogo AgroMax</h2>
+      <p class="text-gray-600 mt-3">Escolha uma categoria para visualizar os produtos.</p>
+    </div>
+
+    <!-- CATEGORIAS -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <button class="categoria-btn active" data-categoria="maquinas">🚜 Máquinas</button>
+      <button class="categoria-btn" data-categoria="sementes">🌱 Sementes</button>
+      <button class="categoria-btn" data-categoria="insumos">🧪 Insumos</button>
+      <button class="categoria-btn" data-categoria="sistemas">💧 Sistemas</button>
+      <button class="categoria-btn" data-categoria="drones">📡 Drones</button>
+    </div>
+
+    <!-- GRID DE PRODUTOS -->
+    <div id="produtos-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </div>
+</section>
+
+<!-- CARRINHO -->
+<section id="carrinho" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-green-800 mb-10 text-center">Carrinho de Compras</h2>
+    <div id="carrinho-itens" class="space-y-4"></div>
+    <div class="mt-6 text-right text-xl font-bold">Total: R$ <span id="total">0.00</span></div>
+    <div class="mt-4 text-right">
+      <button id="finalizar" class="bg-green-700 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-lg transition">Finalizar Pedido (WhatsApp)</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contato" class="bg-gray-900 text-white py-16">
+  <div class="container mx-auto px-6 text-center">
+    <h3 class="text-2xl font-bold mb-4">AgroMax</h3>
+    <p>Contato via WhatsApp ou formulário</p>
+    <p class="mt-6">© 2026 AgroMax - Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
